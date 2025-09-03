@@ -12,6 +12,6 @@ liquid = input("Give me a liquid: ")
 verb_ing = input("Give me a verb ending in -ing: ")
 body_part = input("Give me a body part (plural): ")
 plural_noun = input("Give me a plural noun: ")
-noun_2 = input("Give me a noun: ")
 
-print("it was a funny " + adjective_1 + ", cold November day. I woke up to the " + adjective_2 + " smell of " + bird + " roasting in the " + room + " downstairs. I " + verb_past + " down the stairs to see if I could help " + verb_1 +  ' the dinner. My mom said, "See if ' + name + ' needs a fresh ' + noun_1 + '." So I carried a tray of glasses full of ' + liquid + " into the " + verb_ing + " room. When I got there, I couldn't believe my " + body_part + "! There were " + plural_noun + " " + verb_ing + " on the " + noun_2 + "!" )
+
+print("it was a funny " + adjective_1 + ", cold November day. I woke up to the " + adjective_2 + " smell of " + bird + " roasting in the " + room + " downstairs. I " + verb_past + " down the stairs to see if I could help " + verb_1 +  ' the dinner. My mom said, "See if ' + name + ' needs a fresh ' + noun_1 + '." So I carried a tray of glasses full of ' + liquid + " into the " + verb_ing + " room. When I got there, I couldn't believe my " + body_part + "! There were " + plural_noun + " " + verb_ing + " on the " + noun_1 + "!" )
