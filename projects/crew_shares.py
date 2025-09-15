@@ -5,10 +5,16 @@ crew = int(input("How many members are in the crew (Not including the captain an
 captain = 7
 first_mate = 3
 
-money = money - crew * 500
-shares = crew + captain + first_mate
-share_amount = money/shares
+# Divides money among captain, first mate, and crew
+
+total_shares = crew + captain + first_mate
+share_amount = money/total_shares
 captain_share = share_amount * 7
 fm_share = share_amount * 3
-c_fm_share = captain_share - fm_share
-share_amount = share
+cfm_share = captain_share + fm_share
+crew_shares = share_amount - 500
+
+cps_round = round(captain_share, 2)
+fms_round = round(fm_share, 2)
+cs_round = round(crew_shares, 2)
+print(f"The captain gets: ${cps_round} \n The first mate gets: ${fms_round} \n The crew gets: ${cs_round}")
