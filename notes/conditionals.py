@@ -26,3 +26,8 @@ else:
     print(f"you missed! {roll}")
 
 print("Your turn is over.")
+
+if monster_hp and monster_hp > 0:
+    print("It is the monsters turn.")
+else:
+    print('The monster is dead!')
