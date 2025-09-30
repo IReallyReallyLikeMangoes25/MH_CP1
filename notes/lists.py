@@ -18,6 +18,7 @@ print(best_name)
 print(names)
 names.pop(best_name)
 print(names)
+names.insert(0, "Mirai")
 
 # list = changable, ordered
 # tuple = not changable, ordered
