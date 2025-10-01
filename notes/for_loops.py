@@ -9,7 +9,7 @@ for num in nums:
     if div >= 100:
         print(f"{div} is half of num and it is still a large number.")
     else:
-        print(num)\
+        print(num)
                
 print("We've completed all the numbers!")
 time.sleep(3)
