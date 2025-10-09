@@ -1,0 +1,62 @@
+# MH 2nd tic Tac Toe pseudocode practice
+
+#import random module
+
+# game_board = [1, 2, 3,
+#               4, 5, 6, 
+#               7, 8, 9]
+
+# possible_spots = [1, 2, 3
+#                   4, 5, 6
+#                   7, 8, 9]
+
+# user = False
+
+# com = True
+
+# while true:
+    # Ask the user if they want to play 
+        # if they say yes continue to the next loop
+        # if they say no, stop running the code
+
+    # User wants to play = yes:
+        # display game board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # ask user if they want to be X or O
+            # if user says X change user variable to X, and com variable to O
+            # if user says O change user variable to O, and com variable to X
+
+        # MOVE ONE
+        # ask user which space they would like to place their first move
+        # change users choice to X/O on game_board
+        # display game_board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # take users choice out of possible spots
+
+        # MOVE TWO
+        # computer generates a random number from possible spots
+        # change computers choice to X/O on game_board
+        # display game_board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # remove computers coice from possible_spots
+
+        # MOVE THREE
+        # ask user which space they would like to place their move
+        # change computers choice to X/O
+        # display game_board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # take users choice out of possible spots
+    
+        # MOVE FOUR
+        # computer generates a random number from possible spots
+        # change computers choice to X/O on game_board
+        # display game_board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # remove computers coice from possible_spots
+
+        # MOVE FIVE
+        # ask user which space they would like to place their move
+        # change computers choice to X/O
+        # display game_board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # take users choice out of possible spots
+
+        # MOVE SIX
+        # computer generates a random number from possible spots
+        # change computers choice to X/O on game_board
+        # display game_board 1-3, new line, display game board 4-6, new line, display gameboard 7-9
+        # remove computers coice from possible_spots
