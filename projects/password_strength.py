@@ -9,12 +9,11 @@ spec_chars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "
 upper = False
 lower = False
 num = False
-
+spec = False
 # while loop that runs until user has a complete password
 while True:
     # asks user for password
     password = str(input("What is your password?\n"))
-    print(password)
     points = 0
     outputs = ["Password still needs:"]
     # LOOP ONE
