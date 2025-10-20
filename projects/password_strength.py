@@ -6,6 +6,7 @@ outputs = ["Password still needs:"]
 points = 0
 # special characters
 spec_chars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "<", ">", "?"]
+# if conditions
 upper = False
 lower = False
 num = False

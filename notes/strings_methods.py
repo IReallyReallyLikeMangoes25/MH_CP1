@@ -34,5 +34,3 @@ sentence.replace(word, "yellow")
 #start = sentence.find("fox")
 #length = len("fox")
 #print(sentence[start: start + length])
-
-
