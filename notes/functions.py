@@ -47,3 +47,11 @@ print(f"Monster health is now: {monster_hp}")
 
 print(f"a = {ord("a")}")
 print(f"100 = {chr(100)}")
+
+letter = "a"
+
+num = ord(letter)
+
+num += 1
+
+print(chr(num))
