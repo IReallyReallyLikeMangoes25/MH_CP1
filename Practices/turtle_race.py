@@ -80,9 +80,9 @@ def move(turtle):
 
 def win(turtle, xcor):
     if xcor >= 550:
-        message = f"{turtle} wins!"
+        message = (f"{turtle} wins!")
         win == True
-        return win, message
+        return message
     else:
         win == False
         return win
@@ -93,8 +93,53 @@ red, orange, yellow, green, blue, purple, pink = setup()
 
 while True:
     move(red)
-    if win("red", red.xcor()) == False
-
-
+    if win("red", red.xcor()) == False:
+        pass
+    else:
+        message = win("red", red.xcor())
+        print(message)
+        break
+    move(orange)
+    if win("orange", orange.xcor()) == False:
+        pass
+    else:
+        message = win("orange", orange.xcor())
+        print(message)
+        break
+    move(yellow)
+    if win("yellow", yellow.xcor()) == False:
+        pass
+    else:
+        message = win("yellow", yellow.xcor())
+        print(message)
+        break
+    move(green)
+    if win("green", green.xcor()) == False:
+        pass
+    else:
+        message = win("green", green.xcor())
+        print(message)
+        break
+    move(blue)
+    if win("blue", blue.xcor()) == False:
+        pass
+    else:
+        message = win("blue", blue.xcor())
+        print(message)
+        break
+    move(purple)
+    if win("purple", purple.xcor()) == False:
+        pass
+    else:
+        message = win("purple", purple.xcor())
+        print(message)
+        break
+    move(pink)
+    if win("pink", pink.xcor()) == False:
+        pass
+    else:
+        message = win("pink", pink.xcor())
+        print(message)
+        break
 
 turtle.done()
