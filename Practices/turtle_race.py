@@ -69,7 +69,7 @@ def setup():
     finish.pendown()
     finish.forward(800)
 
-    return red, orange, yellow, green, blue, purple, pink
+    return red, orange, yellow, green, blue, purple, pink, finish
 
 # five turtles begin at the start of the screen
 # all turtle start moving towards the end of the screen
@@ -79,67 +79,25 @@ def move(turtle):
 # once the finish line is touched all turtles stop and display whichever turtle won
 
 def win(turtle, xcor):
+    win = False
     if xcor >= 550:
         message = (f"{turtle} wins!")
-        win == True
         return message
     else:
         win == False
         return win
 
 
-red, orange, yellow, green, blue, purple, pink = setup()
+red, orange, yellow, green, blue, purple, pink, finish = setup()
 
-
+# while loop that moves a turtle, checks if it's on the line, and then if it's not moves the next one, if it is, end the game.
 while True:
     move(red)
-    if win("red", red.xcor()) == False:
-        pass
-    else:
-        message = win("red", red.xcor())
-        print(message)
-        break
     move(orange)
-    if win("orange", orange.xcor()) == False:
-        pass
-    else:
-        message = win("orange", orange.xcor())
-        print(message)
-        break
     move(yellow)
-    if win("yellow", yellow.xcor()) == False:
-        pass
-    else:
-        message = win("yellow", yellow.xcor())
-        print(message)
-        break
     move(green)
-    if win("green", green.xcor()) == False:
-        pass
-    else:
-        message = win("green", green.xcor())
-        print(message)
-        break
     move(blue)
-    if win("blue", blue.xcor()) == False:
-        pass
-    else:
-        message = win("blue", blue.xcor())
-        print(message)
-        break
     move(purple)
-    if win("purple", purple.xcor()) == False:
-        pass
-    else:
-        message = win("purple", purple.xcor())
-        print(message)
-        break
     move(pink)
-    if win("pink", pink.xcor()) == False:
-        pass
-    else:
-        message = win("pink", pink.xcor())
-        print(message)
-        break
 
 turtle.done()
