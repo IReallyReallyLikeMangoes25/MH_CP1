@@ -12,7 +12,7 @@ while num == 0:
         age = input("What is your age: ")
         fav_color = input("What is your favorite color: ")
         print("Welcome", name, ", my favorite color is also", fav_color, ", though I am definitely not", age, ".")
-        info[name.title()] = age, fav_color
+        info[name.title()] = [age, fav_color]
         print(info)
 
 # for advanced: creat list to store data that hs been input before, a loop after name to check if name has been input before, if it has display that persons information

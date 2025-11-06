@@ -15,6 +15,8 @@ squares = [[0, 0], [0, 30], [0, 60], [0, 90], [0, 120], [0, 180],
            [180, 0], [180, 30], [180, 60], [180, 90], [180, 120], [180, 180]
            ]
 
+square_walls = []
+
 
 def set_square(square_num):
     sides = [0, 0, 0, 0]
@@ -23,7 +25,7 @@ def set_square(square_num):
     turtle.pendown()
     # turtle goes sqaure by square and goes to every side of every square and randomly decides if that side will be white or black:
     # turtle goes to squarework
-    for i in sides(0, 3):
+    for i in range(4):
         # turtle decides if side 1 is white/black
         # turtle goes to next side
         # decides if side 2 is white or black
@@ -35,14 +37,14 @@ def set_square(square_num):
         if yes_or_no == 1:
             turtle.color("#000000")
             turtle.forward(30)
-            sides[i] += 1
+            sides[i] = 1
         else:
             turtle.color("#FFFFFF")
             turtle.forward(30)
-            sides[i] += 2
+            sides[i] = 0
         turtle.left(90)
 
-    return 
+    return sides
 
 
 def border():
@@ -73,11 +75,13 @@ def solvable():
     pass
 
 for square in squares:
-    set_square(square)
+    square_walls.append(set_square(square))
 
 
 
 border()
+
+print(square_walls)
 
 turtle.done()
 
