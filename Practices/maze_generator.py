@@ -17,6 +17,9 @@ squares = [[0, 0], [0, 30], [0, 60], [0, 90], [0, 120], [0, 180],
 
 square_walls = []
 
+end_square = square_walls[-1]
+
+start_square = square_walls[0]
 
 def set_square(square_num):
     sides = [0, 0, 0, 0]
@@ -71,11 +74,19 @@ def border():
     turtle.pendown()
     turtle.forward(30)
 
-def solvable():
-    pass
+def solveable(start, walls, end):
+    checker = turtle.Turtle()
+    checker.color("#FF0000")
+    checker.penup()
+    checker.goto(start)
+    for i in range(36):
+        for i in walls():
+
+
 
 for square in squares:
     square_walls.append(set_square(square))
+    pass
 
 
 
