@@ -1,2 +1,2 @@
 
-        if yes_or_no == 1:
+# prints out the options

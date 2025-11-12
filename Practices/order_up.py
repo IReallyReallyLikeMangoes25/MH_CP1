@@ -1,4 +1,6 @@
 # MH 2nd order up practice
+full_order = []
+cost = 0
 
 # menu dictionary
 menu = {
@@ -11,10 +13,10 @@ menu = {
 },
 
 "entrees" : {
-    "Pepperoni" : 8.99,
-    "Cheese" : 7.99,
-    "Supreme" : 9.99,
-    "Meat lovers" : 9.99
+    "Pepperoni pizza" : 8.99,
+    "Cheese pizza" : 7.99,
+    "Supreme pizza" : 9.99,
+    "Meat lovers pizza" : 9.99
 },
 
 "drinks" : {
@@ -35,26 +37,40 @@ def order(options, title):
     for option in options:
         print(option)
 # asks user what they want and how many items they want
-    how_many = input(f"How many {title} will you be ordering?")
+    how_many = int(input(f"How many {title} will you be ordering?\n"))
     while True:
-        for i in how_many:
-            item = input("What item would you like to order?").lower().strip().title()
+        for item in range(how_many):
+            item = str(input("What item would you like to order?\n"))
             if item in options:
-                cart.append[item]
+                cart.append(item)
                 price += options[item]
             else:
                 # if they give an invalid input ask again
-                print("That item is not one of the options, please input another choice.")
-                how_many += 1
-                continue
+                print("That item is not one of the options, please input another choice.\n")
         break
 
     return cart, price
 # returns each choice and how much this part of the order will cost
 
 # run function for sides
-order(menu["sides"], "sides")
+sides, cost_1 = order(menu["sides"], "sides")
+for item in sides:
+    full_order.append(item)
+cost += cost_1
 # run function for drinks
+drinks, cost_2 = order(menu["drinks"], "drinks")
+for item in drinks:
+    full_order.append(item)
+cost += cost_2
 # run function for entrees
+entrees, cost_3 = order(menu["entrees"], "entrees")
+for item in entrees:
+    full_order.append(item)
+cost += cost_3
 # add every return of food and price to a new list
 # print out new list and total cost
+print("Your order is:")
+for i in full_order:
+    print(i)
+
+print(f"Total cost: {cost}")
