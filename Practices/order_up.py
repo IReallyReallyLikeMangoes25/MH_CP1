@@ -33,21 +33,17 @@ def order(options, title):
         print(f"{option} : {options[option]}")
 # asks user what they want and how many items they want
 
-    how_many = input(f"How many {title} will you be ordering?\n")
-    try:
-        int(how_many)
-        for item in range(how_many):
-                while item not in options:
-                    item = str(input("What item would you like to order?\n")).strip().lower().capitalize()
-                    if item in options:
-                        cart.append(item)
-                        price += options[item]
-                    else:
-                        # if they give an invalid input ask again
-                        print("That item is not one of the options, please input another choice.\n")     
-                break
-        return cart, price
-    except:
+    how_many = int(input(f"How many {title} will you be ordering? (Please answer in the form of an integer)\n"))
+    for item in range(how_many):
+        while item not in options:
+            item = str(input("What item would you like to order?\n")).strip().lower().capitalize()
+            if item in options:
+                cart.append(item)
+                price += options[item]
+            else:
+                # if they give an invalid input ask again
+                print("That item is not one of the options, please input another choice.\n")     
+    return cart, price
         
 # returns each choice and how much this part of the order will cost
 print("Welcome to Mirai's Super Good Epic Pizza, let me take your order-\n")
