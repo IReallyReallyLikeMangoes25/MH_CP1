@@ -1,2 +1,2 @@
 
-# prints out the options
+    return avg

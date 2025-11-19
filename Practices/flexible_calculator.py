@@ -1,17 +1,16 @@
 # MH 2nd flexible calculator practice
 
 # SUM:
-def sum(*nums):
-    # take all numbers in
-    total = 0 
-    # add them all one by one
-    for num in nums:
-        total += num
+def add(*nums):
+    nums = nums[0]
+    # take all numbers in 
+    # add them all
     # return the sum of all numbers
-    return total
+    return sum(nums)
 
 # AVERAGE:
 def average(*nums):
+    nums = nums[0]
     # take all numbers in
     # save how many there are
     how_many = 0
@@ -27,46 +26,33 @@ def average(*nums):
 
 
 # MAX:
-def max(*nums):
+def maximum(*nums):
+    nums = nums[0]
     # takes all numbers in
-    biggest = float('-inf')
-    # takes first number, compares it to second
-    for num in nums:
-    # if the first number is bigger, compare it to the next
-    # if the second number is bigger, compare it to the next
-        if num >= biggest:
-            biggest = num
-    # do this for all numbers
-    return biggest
+    # compares all numbers
+    # returns highest number
+    return max(nums)
 
 # MIN:
-def min(*nums):
-    smallest = float('inf')
+def minimum(*nums):
+    nums = nums[0]
     # takes all numbers in
-    # takes first number, compares it to second
-    for num in nums:
-    # if the first number is smaller, compare it to the next
-    # if the second number is smaller, compare it to the next
-        if num <= smallest:
-            smallest = num
-    # do this for all numbers
-    return smallest
+    # compares all numbers
+    # returns lowest number
+    return min(nums)
+
 
 # PRODUCT:
 def product(*nums):
+    nums = nums[0]
     # takes in all numbers
-    numbers = []
     # multiplys all numbers
+    multiplied = nums[0]
+    del nums[0]
     for num in nums:
-        numbers.append(num)
-
-    multiplied = numbers[0]
-    numbers.pop(0)
-
-    for number in numbers:
-        multiplied *= number
+        multiplied *= num
     # returns product
-    return number
+    return multiplied
 
 # ask user what operation they would like to perform
 operation = int(input("What operation would you like to perform:\n1. Sum\n2. Average\n3. Maximum\n4. Minimum\n5. Product\n"))
@@ -76,20 +62,23 @@ how_many = int(input("How many numbers will this operation be performed upon?\n"
 numbers = []
 
 for num in range(how_many):
-    int(input("Number: "))
+    num = int(input("Number: "))
     numbers.append(num)
 
 if operation == 1:
-    print(f"The sum of those numbers is {sum(numbers)}")
+    print(f"The sum of those numbers is {add(numbers)}")
 
 elif operation == 2:
     print(f"The average of those numbers is {average(numbers)}")
 
 elif operation == 3:
-    print(f"The maximum of those numbers is {max(numbers)}")
+    print(f"The maximum of those numbers is {maximum(numbers)}")
 
 elif operation == 4:
-    print(f"The minimum of those numbers is {min(numbers)}")
+    print(f"The minimum of those numbers is {minimum(numbers)}")
 
 elif operation == 5:
     print(f"The product of those numbers is {product(numbers)}")
+
+else:
+    print("You input an invalid operation, please try again.")
