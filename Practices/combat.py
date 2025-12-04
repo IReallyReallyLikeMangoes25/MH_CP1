@@ -106,7 +106,7 @@ def your_turn(starter, atk, rdefense, spec_atk, rspec_def, potions):
                     break
                 elif action == 3:
                     print("Bulbasuar used vine Whip!")
-                    damage += ((atk + 45) / 5) - (rdefense / 5)
+                    damage += ((spec_atk + 45) / 5) - (rspec_def / 5)
                     return damage, "damage"
                     break
                 else:
@@ -164,7 +164,7 @@ def your_turn(starter, atk, rdefense, spec_atk, rspec_def, potions):
                 break
             elif action == 3:
                 print("Charmander used Ember!")
-                damage += ((spec_atk + 40) / 5) - (rdefense / 5)
+                damage += ((spec_atk + 40) / 5) - (rspec_def / 5)
                 return damage, "damage"
                 break
             else:
@@ -200,7 +200,7 @@ def rival_turn(rpotions, defense, spec_def, rival, ratk, rdefense, rspec_atk):
                 break
             elif action == 3:
                 print("Rivals Bulbasaur used Vine Whip!")
-                damage += ((ratk + 45) / 5) - (defense / 5)
+                damage += ((rspec_atk + 45) / 5) - (spec_def / 5)
                 return damage, "damage"
                 break
             else:
@@ -252,7 +252,7 @@ def rival_turn(rpotions, defense, spec_def, rival, ratk, rdefense, rspec_atk):
                 return atk_debuff, "atk_debuff"
             elif action == 3:
                 print("Rival Charmander used Ember!")
-                damage += ((rspec_atk + 40) / 5) - (defense / 5)
+                damage += ((rspec_atk + 40) / 5) - (spec_def / 5)
                 return damage, "damage"
                 break
             else:
