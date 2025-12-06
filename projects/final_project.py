@@ -47,6 +47,7 @@
 
     # Front room:
         # In this room the player has their choice of two doors
+        # print out door options:
         # door 1 - leads to the kitchen
         # door 2 - leads to the supplies room
         # return their room choice
@@ -59,6 +60,7 @@
         # +5 attack/speed/defense
         # return cauldron as False (empty) and display door options
         # the player has 3 door options in this room
+        # print out door options:
         # door 1 - Go back to the generator room
         # door 2 - Go to the meeting room
         # door 3 - Go to the Dons office
@@ -68,6 +70,7 @@
         # in this room if the player hasn't already turned off the generator they will be given the choice to turn it off
         # if they choose to turn it off give all enemies -3 speed and player -3 attack and return generator as False (turned off) and display door options
         # the player has two door options in this room
+        # print out door options:
         # door 1 - Go back to the kitchen
         # door 2 - Go to the incantation room
         # also return their room choice
@@ -76,6 +79,7 @@
         # check if cursed lasagne has been eaten, if it has provide door options, if it hasn't ask player if they want to eat the lasagne
         # if the player eats the lasagne randomly choose between giving them a stat boost or debuff and return cured lasagne as False (eaten) and display door options
         # the player will be given three door choices in this room
+        # print out door options:
         # door 1 - Go back to the front room
         # door 2 - Go to the generator room
         # door 3 - Go to the meeting room
@@ -85,6 +89,7 @@
         # Check if the broken wand is already in the players inventory, if it is provide door options, if it's not ask the player if they would like to pick up the broken wand
         # If they want to pick it up return broken wand as False (in inventory) and display door options
         # The player will have 3 door options in this room:
+        # print out door options:
         # door 1 - Go to the meeting room
         # door 2 - Go to the Dons office
         # door 3 - Go to the vault
@@ -94,6 +99,7 @@
         # Check if the $30 is already in the players inventory, if it is provide door options, if it's not ask them if they would like to pick it up
         # if they pick it up return 30 dollars as False (in inventory) and display door options
         # in this room there are 2 door options
+        # print out door options:
         # door 1 - Go to the supplies room
         # door 2 - Go to the game room
         # also return their room choice
@@ -103,6 +109,7 @@
         # run the battle function twice for grunt stats
         # the player has to defeat both to get the door options
         # the player has 4 door options in this room
+        # print out door options:
         # door 1 - Go to the kitchen
         # door 2 - Go to the supplies room
         # door 3 - Go to the game room
@@ -113,6 +120,7 @@
         # check if the artifact has already been knocked over, if it hasn't ask the player if they want to knock it over
         # If they say they do, -2 from all enemy attack stats, return artifact as False (knocked over) and display door options
         # in this room the player has the choice between 3 doors
+        # print out door options:
         # door 1 - Go back to the front room
         # door 2 - Go to the vault
         # door 3 - Go to the meeting room
@@ -192,7 +200,7 @@
                 # else room choice = Dons office run Dons office
 
         # after either the player or Don dies, as the user if they want to play again
-        # INPUT: "DO you want to play again?"
+        # INPUT: "Do you want to play again?"
         # if they don't change wants to play to false
         # if they do keep running the loop
     
