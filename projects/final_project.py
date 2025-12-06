@@ -52,7 +52,8 @@
         # return their room choice
 
     # Incantation room: Takes in cauldron
-        # In this room there's a grunt, run the battle function
+        # Theres one battle in this room
+        # run battle function for grunt stats
         # in this room if the cauldron is still full ask the player if they would like to use it
         # if they do randomize to choose what they get - 
         # +5 attack/speed/defense
@@ -98,7 +99,8 @@
         # also return their room choice
 
     # Meeting room:
-        # there are two grunts in this room, run the battle function for both
+        # there are two grunts in this room
+        # run the battle function twice for grunt stats
         # the player has to defeat both to get the door options
         # the player has 4 door options in this room
         # door 1 - Go to the kitchen
@@ -192,5 +194,5 @@
         # after either the player or Don dies, as the user if they want to play again
         # INPUT: "DO you want to play again?"
         # if they don't change wants to play to false
-        # if they do keep running the loopp
+        # if they do keep running the loop
     
