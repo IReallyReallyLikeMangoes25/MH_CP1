@@ -190,13 +190,13 @@
         # run front room function and save next room choice in the room choice varaible
             # after the player has made their initial choice, keep running while the player and Don are alive:
                 # if room choice = front room run front room and update room choice to whatever they choose in this room
-                # else if room choice = kitchen run kitchen
-                # else if room choice = supplies room run supplies room
-                # else if room choice = generator room run generator room
-                # else if room choice = incantation room run incantation room
-                # else if room choice = meeting room run meeting room
-                # else if room choice = game room run game room
-                # else if room choice = vault run vault
+                # else if room choice = kitchen run kitchen and update room choice to whatever they choose in this room
+                # else if room choice = supplies room run supplies room and update room choice to whatever they choose in this room
+                # else if room choice = generator room run generator room and update room choice to whatever they choose in this room
+                # else if room choice = incantation room run incantation room and update room choice to whatever they choose in this room
+                # else if room choice = meeting room run meeting room and update room choice to whatever they choose in this room
+                # else if room choice = game room run game room and update room choice to whatever they choose in this room
+                # else if room choice = vault run vault and update room choice to whatever they choose in this room
                 # else room choice = Dons office run Dons office
 
         # after either the player or Don dies, as the user if they want to play again
