@@ -1,7 +1,7 @@
 # MH 2nd final project
 
 import random
-play_or_quit = input("Do you want to play or quit?").lower().strip().capitalize()
+play_or_quit = input("Do you want to play or quit?\n1. Play\n2. Quit")
 
 current_room = 0
 
@@ -43,28 +43,59 @@ cursed_lasagne = True
 thirty_dollars = True
 generator = True
 cauldron = True
-artifact = True
+magical_artifact = True
 
 def dons_office():
     pass
 
 def front_room():
     print("description")
-    choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\nDoor one\nDoor two")
+    choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\n1. Door one\n2. Door two")
     while True:
-        if choice == "Door one":
+        if choice == "1":
             print("You walk up to the door and open it, hoping that red stain on the bottom is just marinara.")
-        elif choice == "Door two":
+            break
+        elif choice == "2":
             print("You approach the door and open it.")
+            break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\nDoor one\nDoor two")
+            choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\n1. Door one\n2. Door two")
+    return choice
 
-def kitchen():
+def kitchen(lasagne):
     print("Looks like this is just the kitchen")
+    if lasagne == True:
+        take = input("On the counter is a lasagne, looks like it's been left out... You are pretty hungry... Eat it?\n1. Eat the lasagne\n2. Leave it alone")
+        if take == 1:
+            print("You eat the lasagne... It takes like cigarettes and has too many newts in it.")
+            lasagne = False
+            rand = random.randint(1,2)
+            if rand == 1:
+                print("Surprisingly though, it didn't kill you. You even feel slightly healthier than you did before.")
+                stat_change = 5
+            elif rand == 2:
+                print("That was the worst decision of your life, why would you ever even consider eating that. You feel terrible, that thing was definitely cursed, it feels like your body is three times weaker than before.")
+                stat_change = -5
+    choice = input("There are three doors in this room. You should keep moving.\n1. Door one\n2. Door two\n3. Door three")
+    while True:
+        if choice == "1":
+            print("You walk up to the door and go through.")
+            break
+        elif choice == "2":
+            print("You approach the door and go through.")
+            break
+        else:
+            print("You can't see a door like that anywhere, choose from the ones you can see.")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three")
+    return choice, lasagne, stat_change
+
 
 def supplies_room():
-    pass
+    print("Looks like this is the supplies room, it's got all kinds of wizard crap laying around. wands, rabbits feet, pixie dust, and are those live goblins? Is that ethical?")
+    artifact = input("Far, far over in the corner you see a pedestal with something extra suspicious on top. You walk over.\nIt's... What looks like an articaft in the shape of margarita pizza. That's stupid, maybe you should knock it over.\n1. Knock it over\n2. Leave it be, it's not worth your time")
+    if artifact == 1:
+        print("You knock it over... As far as you can tell nothing hapened. Whatever, it was really satisfying. Screw those magic idiots.")
 
 def incantation_room():
     pass
