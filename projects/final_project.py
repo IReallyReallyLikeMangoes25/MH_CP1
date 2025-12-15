@@ -2,7 +2,7 @@
 import time
 import random
 play_or_quit = input("Do you want to play or quit?\n1. Play\n2. Quit\n")
-
+name = input("what is your last name?")
 current_room = 0
 
 stats = {
@@ -44,7 +44,7 @@ generator = True
 magical_cauldron = True
 magical_artifact = True
 
-def dons_office():
+def dons_office(player_name):
     press = input("...This room is pitch black... It's quiet, too quiet. You begin to look around and crash into what feels like a large steel block. On top you can feel a button, will you press it?\n1. Press it\n2. No way Hose\n")
     if press == "1":
         print("You press the button and immediately you feel the ground shifting, and the steel block lowers into the ground. From the hole it left a bright light begins to shine and you can see the fog blanketing the ground, and EDM music blares from speakers placed around the room. Then the floor opens up with a loud mechanical whir, and out from it rises a platform with noneother stadning on it than the Don. Once he rises fully there's a moment of awkward silence...")
@@ -59,7 +59,7 @@ def dons_office():
         time.sleep(2)
         print("Like, seriously, for such a feared guy you'd think-")
         time.sleep(2)
-        print("I like EDM ok!? Jeez. NOW AS I WAS SAYING- Detective player... I have been waiting for you... And.. Uh... Dang it my notecards are out of order! Whatever! This ends today detective!")
+        print(f"I like EDM ok!? Jeez. NOW AS I WAS SAYING- Detective {player_name}... I have been waiting for you... And.. Uh... Dang it my notecards are out of order! Whatever! This ends today detective!")
         winner = battle(stats["player"]["speed"], stats["player"]["health"], stats["Don"]["speed"], stats["Don"]["health"])
         if winner == "player":
             print("...Finally. It's over.")
@@ -72,7 +72,7 @@ def dons_office():
         pass
 
 def front_room():
-    print("description")
+    print("Finally, you made it... You've tracked down the base of those idiots and finllaly you're going to destroy them once and for all. Suprisingly though, from the outside it looks like a very normal resturaunt. Once you enter it's the same. It's a homely place, with tables and even an olive bar. Looks like these guys do have some semblance of class.")
     choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\n1. Door one\n2. Door two\n")
     while True:
         if choice == "1":
@@ -85,7 +85,7 @@ def front_room():
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\n1. Door one\n2. Door two")
+            choice = input("You see two doors at the back, seems they're the only ways forward. Which way should you go?\n1. Door one\n2. Door two\n")
     return choice
 
 def kitchen(lasagne):
@@ -119,7 +119,7 @@ def kitchen(lasagne):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three\n")
     return choice, lasagne, stat_change
 
 
@@ -150,7 +150,7 @@ def supplies_room(artifact):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three\n")
     return choice, artifact, stat_change
 
 def incantation_room(cauldron):
@@ -194,7 +194,7 @@ def incantation_room(cauldron):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n3. Door three\n")
     return choice, cauldron, stat_change, source
 
 def generator_room(the_generator):
@@ -220,7 +220,7 @@ def generator_room(the_generator):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n")
 
     return choice, the_generator, stat_change
 
@@ -228,14 +228,14 @@ def generator_room(the_generator):
 def game_room(wand):
     print("Looks like these guys aren't complete monsters after all, they've got a pool table in here. Although, it is a bit off a mess. There a broken bottles and cigarettes everywhere.")
     if wand == True:
-        take = input("On the pool table you also see a broken wand... It's against your morals but it could come in handy... Take it?\n1. Take the wand\n2. Leave it- it's broken anyway")
+        take = input("On the pool table you also see a broken wand... It's against your morals but it could come in handy... Take it?\n1. Take the wand\n2. Leave it- it's broken anyway\n")
         if take == "1":
             print("You grab the wand, it feels wrong to even hold this in your hand, but it's in the name of justice.")
             take = True
         elif take == "2":
             print("You leave the wand, it's not worth sacraficing your principles.")
             take = False
-    choice = input("There are three doors in this room. You should keep moving.\n1. Door one\n2. Door two\n3. Door three")
+    choice = input("There are three doors in this room. You should keep moving.\n1. Door one\n2. Door two\n3. Door three\n")
     while True:
         if choice == "1":
             print("You walk up to the door and go through.")
@@ -251,20 +251,20 @@ def game_room(wand):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n")
     return choice, take
 
 def vault(cash):
     print("There is so much money in this room... So. Much. Money. Literally how did they get all this... Definitely not legally.")
     if cash == True:
-        take = input("Though, some money might come in handy while in here. Who knows what those wizard lackeys would do for some of this cash their boss is hoarding...\n1. Take the cash\n2. You're better than that, who knows how many people they hurt to get that money.")
+        take = input("Though, some money might come in handy while in here. Who knows what those wizard lackeys would do for some of this cash their boss is hoarding...\n1. Take the cash\n2. You're better than that, who knows how many people they hurt to get that money.\n")
         if take == 1:
             print("You're not better than this, you take $30 dollars.")
             take = True
         elif take == 2:
             print("No! You have honour! Remember the detectives code! You leave the cash but you retain your dignity.")
             take = False
-    choice = input("There are two doors in this room. You should keep moving.\n1. Door one\n2. Door two")
+    choice = input("There are two doors in this room. You should keep moving.\n1. Door one\n2. Door two\n")
     while True:
         if choice == "1":
             print("You walk up to the door and go through.")
@@ -276,7 +276,7 @@ def vault(cash):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n")
     return choice, take
 
 def meeting_room(grunts):
@@ -319,7 +319,7 @@ def meeting_room(grunts):
             break
         else:
             print("You can't see a door like that anywhere, choose from the ones you can see.")
-            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two")
+            choice = input("You see three, seems they're the only paths to follow. Which way should you go?\n1. Door one\n2. Door two\n")
 
     return choice, grunts
     
@@ -398,12 +398,9 @@ def battle(player_speed, player_health, enemy_speed, enemy_health):
                     elif player_health < 0:
                         winner = "enemy"
                         return winner
-    
-                        winner = "enemy"
-                        return winner
 
 def player_turn(player_attack, player_specialatk, enemy_defense, enemy_specialdef, player_inventory):
-    action = input("What would you like to do?\n1. Attack\n2. Heal\n3. Special attack\n4. Use inventory item")
+    action = input("What would you like to do?\n1. Attack\n2. Heal\n3. Special attack\n4. Use inventory item\n")
     auto_win = False
     source = ""
     while True:
@@ -422,9 +419,9 @@ def player_turn(player_attack, player_specialatk, enemy_defense, enemy_specialde
             print(f"You do {damage} damage")
             source = "damage"
             return damage, source
-        elif action == 4:
+        elif action == 4 and player_inventory > 0:
             print(player_inventory)
-            use = input("what item would you like to use?")
+            use = input("what item would you like to use?\n")
             while True:
                 if use == "broken wand":
                     rand = random.randint(1,2)
@@ -451,10 +448,10 @@ def player_turn(player_attack, player_specialatk, enemy_defense, enemy_specialde
                         return healed, source
                 else:
                     print("That is not in your inventoy, please choose again.")
-                    use = input("what item would you like to use?")
+                    use = input("what item would you like to use?\n")
         else:
             print("That is not an option right now, make anoter choice.")
-            action = input("What would you like to do?\n1. Attack\n2. Heal\n3. Special attack\n4. Use inventory item")
+            action = input("What would you like to do?\n1. Attack\n2. Heal\n3. Special attack\n4. Use inventory item\n")
 
 def enemy_turn(player_specialdef, player_defense, enemy_attack, enemy_defense, enemy_specialatk, magic):
     source = ""
@@ -476,11 +473,24 @@ def enemy_turn(player_specialdef, player_defense, enemy_attack, enemy_defense, e
         return damage, source
     else:
         damage = (enemy_specialatk / 5) - (player_specialdef /5) + random.randint(4-7)
-        print(f"The wizard casts a speel on you and you take {damage} damage")
+        print(f"The wizard casts a spell on you and you take {damage} damage")
         source = "damage"
         return damage, source
 
-while True:
+while play_or_quit == "1":
+    print("it all began seven dreary years ago... In your office, with a cigar and some scotch, when that broad walked in... Until this case all your detective work had been normal, catching robbers, cheating husbands, murderers, the usual. Then she came along knocking at the door with the biggest case any sleuth had seen since the thirties...")
+    time.sleep(1)
+    print("... Come in.")
+    time.sleep(1)
+    print(f"Hello... Are you Detective {name}?")
+    time.sleep(1)
+    print(f"Only if you got a case for me.")
+    time.sleep(1)
+    print("Well I'm afraid I do sir... That's why I'm here, at your detective company, asking for the detective.")
+    time.sleep(1)
+    print("I know... I just like asking that. Go ahead and sit down and tell me what trouble a girl like you could possibly be getting mixed up in.")
+    time.sleep(1)
+
     next_room = front_room()
     while stats["player"]["health"] > 0:
         if next_room == "front room":
@@ -530,9 +540,9 @@ while True:
                 inventory["30 bucks"] = True
             continue
         else:
-            dons_office()
+            dons_office(name)
             break
-    play_or_quit = input("Would you like to play again?\n1. Yes\n2. No")
+    play_or_quit = input("Would you like to play again?\n1. Yes\n2. No\n")
     if play_or_quit == "1":
         two_grunts = True
         broken_wand = True
